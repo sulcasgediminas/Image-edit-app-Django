@@ -1,2 +1,2 @@
-# image-edit-app-Django
+# Image-edit-app-Django
 Django image edit web app.
