@@ -7,7 +7,7 @@ from .models import Image
 class ImageAdmin(admin.ModelAdmin):
     list_filter = ('title', 'description')
     search_fields = ('title', 'description')
-    list_display = ('title', 'description', 'image_thumbnail')
+    list_display = ('title', 'description', 'image_thumbnail', 'user')
     def image_thumbnail(self, obj):
         return format_html(f'<img src="{obj.image_file.url}" width="100" height="100" />')
     image_thumbnail.short_description = 'Thumbnail'

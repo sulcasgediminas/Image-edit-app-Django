@@ -1,4 +1,6 @@
 from django.db import models
+from django.conf import settings
+
 
 class Image(models.Model):
     title = models.CharField(
@@ -12,6 +14,7 @@ class Image(models.Model):
     description = models.TextField()
     image_file = models.ImageField(upload_to='media/images/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
     
     def __str__(self):
         return self.title

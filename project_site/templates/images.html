@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Images</h1>
+  <p>Images has been uploaded.</p>
+  <ul>
+  {% for i in images %}
+    <li>{{ i.title }} - {{ i.description }}<br><img src="{{ i.image_file.url }}" width="300px"></li>
+  {% endfor %}
+  </ul>
+{% endblock %}

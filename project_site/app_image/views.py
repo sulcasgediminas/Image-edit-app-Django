@@ -11,6 +11,12 @@ def index(request):
     }
     return render(request, 'index.html', context=context)
 
+def images(request):
+    images = Image.objects.all()
+    context = {
+        'images' : images
+    }
+    return render(request, 'images.html', context=context)
 
 def upload_image(request):
     if request.method == 'POST':
