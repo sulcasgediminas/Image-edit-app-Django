@@ -18,3 +18,9 @@ class Image(models.Model):
     
     def __str__(self):
         return self.title
+    
+    def save(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
+        if user:
+            self.user = user
+        super().save(*args, **kwargs)
