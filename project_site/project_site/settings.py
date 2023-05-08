@@ -132,3 +132,5 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
+
+OPENAI_API_KEY = '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'

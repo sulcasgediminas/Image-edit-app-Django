@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- templates/generate_image.html -->
+<h1>Generate Image</h1>
+<form method="POST" action="{% url 'generate_image' %}">
+    {% csrf_token %}
+    <label for="prompt">Prompt:</label>
+    <input type="text" name="prompt" id="prompt">
+    <br>
+    <button type="submit">Generate Image</button>
+</form>
+
+
+{% endblock %}
+
