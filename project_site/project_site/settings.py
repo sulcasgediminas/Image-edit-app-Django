@@ -133,4 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
 
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = ''
