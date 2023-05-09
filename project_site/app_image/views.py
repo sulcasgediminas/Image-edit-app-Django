@@ -61,6 +61,7 @@ def images(request):
     }
     return render(request, 'images.html', context=context)
 
+
 @login_required
 def upload_image(request):
     if request.method == 'POST':
