@@ -117,5 +117,6 @@ def generate_image(request):
         image.image_file.save(f"{prompt}.jpg", ContentFile(urllib.request.urlopen(image_url).read()))
         image.save()
         return HttpResponse('Image generated and saved successfully!')
+
     return render(request, 'generate_image.html')
 
